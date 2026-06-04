@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { Star, ShoppingCart, Send, Eye, BadgeAlert, BadgeCheck } from 'lucide-react';
+import { Star, ShoppingCart, Send, Eye, BadgeAlert, BadgeCheck, X } from 'lucide-react';
 import { PLANTS } from '../data';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -130,12 +130,16 @@ export const PlantGrid = ({
         {/* Single Plant Quick View Botanical Details Modal */}
         <AnimatePresence>
           {selectedPlantDetails && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs">
+            <div 
+              onClick={() => setSelectedPlantDetails(null)}
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs cursor-pointer"
+            >
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
-                className="w-full max-w-lg bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col relative"
+                onClick={(e) => e.stopPropagation()}
+                className="w-full max-w-lg bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col relative cursor-default"
               >
                 <div className="relative">
                   <img
@@ -146,12 +150,7 @@ export const PlantGrid = ({
                     alt={selectedPlantDetails.name}
                     className="w-full h-64 object-cover"
                   />
-                  <button
-                    onClick={() => setSelectedPlantDetails(null)}
-                    className="absolute top-4 right-4 bg-black/60 hover:bg-black/80 text-white p-2.5 rounded-full transition-colors focus:outline-hidden cursor-pointer"
-                  >
-                    ✕
-                  </button>
+                  
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 text-white">
                     <div>
                       {selectedPlantDetails.scientificName && (
@@ -162,6 +161,14 @@ export const PlantGrid = ({
                       <h3 className="text-2xl font-bold font-serif">{selectedPlantDetails.name}</h3>
                     </div>
                   </div>
+
+                  <button
+                    onClick={() => setSelectedPlantDetails(null)}
+                    className="absolute top-4 right-4 z-20 bg-black/60 hover:bg-black/80 text-white p-2 text-center rounded-full transition-colors focus:outline-hidden cursor-pointer flex items-center justify-center"
+                    aria-label="Close modal"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
                 </div>
 
                 <div className="p-6 space-y-4">
@@ -243,7 +250,8 @@ const PlantCard = ({ plant, onAddToCart, onBuyNow, onViewDetails }) => {
     <motion.div
       layout
       viewport={{ once: true }}
-      className="bg-white rounded-3xl overflow-hidden border border-[#10B981]/15 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+      onClick={() => onViewDetails(plant)}
+      className="bg-white rounded-3xl overflow-hidden border border-[#10B981]/15 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
     >
       <div className="relative overflow-hidden aspect-square self-stretch">
         {/* Dynamic Image component with beautiful Unsplash fallback */}
@@ -268,17 +276,6 @@ const PlantCard = ({ plant, onAddToCart, onBuyNow, onViewDetails }) => {
               Out Of Stock
             </span>
           )}
-        </div>
-
-        {/* Quick View Button on Image hover */}
-        <div className="absolute inset-0 bg-[#064E3B]/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-          <button
-            onClick={() => onViewDetails(plant)}
-            className="px-4 py-2 bg-white/95 backdrop-blur-md rounded-xl text-[10px] font-bold text-[#064E3B] shadow-md transform translate-y-3 group-hover:translate-y-0 transition-all cursor-pointer flex items-center gap-1.5 hover:bg-[#F1F9F6]"
-          >
-            <Eye className="w-3.5 h-3.5 text-[#10B981]" />
-            Quick View details
-          </button>
         </div>
       </div>
 
@@ -317,7 +314,10 @@ const PlantCard = ({ plant, onAddToCart, onBuyNow, onViewDetails }) => {
 
           <div className="grid grid-cols-2 gap-2">
             <button
-              onClick={() => onAddToCart(plant)}
+              onClick={(e) => {
+                e.stopPropagation();
+                onAddToCart(plant);
+              }}
               disabled={!plant.inStock}
               className="py-2.5 px-2.5 text-xxs font-bold border border-[#064E3B]/80 hover:bg-[#F1F9F6] active:bg-emerald-100 disabled:bg-gray-100 disabled:border-gray-200 disabled:text-gray-400 text-[#064E3B] rounded-xl transition-all cursor-pointer flex items-center justify-center gap-1"
             >
@@ -325,7 +325,10 @@ const PlantCard = ({ plant, onAddToCart, onBuyNow, onViewDetails }) => {
               Add to Cart
             </button>
             <button
-              onClick={() => onBuyNow(plant)}
+              onClick={(e) => {
+                e.stopPropagation();
+                onBuyNow(plant);
+              }}
               disabled={!plant.inStock}
               className="py-2.5 px-2.5 bg-[#CCFF00] hover:bg-[#b5e600] active:scale-95 disabled:bg-gray-100 disabled:text-gray-400 text-[#064E3B] text-xxs font-black rounded-xl transition-all duration-300 shadow-md cursor-pointer flex items-center justify-center gap-1"
             >
