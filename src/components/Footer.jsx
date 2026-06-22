@@ -17,9 +17,9 @@ export const Footer = () => {
           {/* Logo Brand information */}
           <div className="md:col-span-1.5 space-y-4">
             <div className="flex items-center gap-2.5 justify-center md:justify-start">
-              <div className="relative w-10 h-10 overflow-hidden bg-white rounded-xl shadow-xs border border-white/10 flex items-center justify-center p-0.5 shrink-0">
+              <div className="relative w-10 h-10 bg-white rounded-full overflow-hidden border border-white/10 flex items-center justify-center p-1 shrink-0">
                 <img 
-                  src="https://lh3.googleusercontent.com/d/1wC2GNfzTKh33K3sgbi7-_NuYISkQBxMp" 
+                  src="https://lh3.googleusercontent.com/d/1dwK0nRmf23PFXWBhmlPIBpdB_J5kissp" 
                   alt="Rosemary Garden Logo" 
                   className="w-full h-full object-contain select-none"
                   referrerPolicy="no-referrer"
@@ -39,16 +39,16 @@ export const Footer = () => {
             <h4 className="text-sm font-semibold text-[#10B981] uppercase tracking-widest text-xs">Explore Nursery</h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <a href="#home" className="hover:text-[#CCFF00] transition-colors">Home</a>
+                <a href="#home" className="hover:text-[#4ADE80] transition-colors">Home</a>
               </li>
               <li>
-                <a href="#plants" className="hover:text-[#CCFF00] transition-colors">Plants Collection</a>
+                <a href="#plants" className="hover:text-[#4ADE80] transition-colors">Plants Collection</a>
               </li>
               <li>
-                <a href="#offers" className="hover:text-[#CCFF00] transition-colors">Special Offers</a>
+                <a href="#offers" className="hover:text-[#4ADE80] transition-colors">Special Offers</a>
               </li>
               <li>
-                <a href="#delivery" className="hover:text-[#CCFF00] transition-colors">Delivery FAQ</a>
+                <a href="#delivery" className="hover:text-[#4ADE80] transition-colors">Delivery FAQ</a>
               </li>
             </ul>
           </div>

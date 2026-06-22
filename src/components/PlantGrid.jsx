@@ -154,7 +154,7 @@ export const PlantGrid = ({
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 text-white">
                     <div>
                       {selectedPlantDetails.scientificName && (
-                        <p className="text-[11px] font-mono tracking-widest text-[#CCFF00] italic font-semibold">
+                        <p className="text-[11px] font-mono tracking-widest text-[#4ADE80] italic font-semibold">
                           {selectedPlantDetails.scientificName}
                         </p>
                       )}
@@ -225,9 +225,9 @@ export const PlantGrid = ({
                         setSelectedPlantDetails(null);
                       }}
                       disabled={!selectedPlantDetails.inStock}
-                      className="flex-1 py-3 bg-[#CCFF00] text-[#064E3B] font-black hover:bg-[#b5e600] active:brightness-95 disabled:bg-gray-100 disabled:text-gray-400 text-sm rounded-xl transition-all cursor-pointer flex items-center justify-center gap-2"
+                      className="flex-1 py-3 bg-[#16A34A] text-white hover:bg-[#15803D] active:brightness-95 disabled:bg-gray-100 disabled:text-gray-400 text-sm font-bold rounded-xl transition-all cursor-pointer flex items-center justify-center gap-2 shadow-sm font-sans"
                     >
-                      <Send className="w-4 h-4" />
+                      <Send className="w-4 h-4 text-white" />
                       Buy Now
                     </button>
                   </div>
@@ -330,9 +330,9 @@ const PlantCard = ({ plant, onAddToCart, onBuyNow, onViewDetails }) => {
                 onBuyNow(plant);
               }}
               disabled={!plant.inStock}
-              className="py-2.5 px-2.5 bg-[#CCFF00] hover:bg-[#b5e600] active:scale-95 disabled:bg-gray-100 disabled:text-gray-400 text-[#064E3B] text-xxs font-black rounded-xl transition-all duration-300 shadow-md cursor-pointer flex items-center justify-center gap-1"
+              className="py-2.5 px-2.5 bg-[#16A34A] text-white hover:bg-[#15803D] active:scale-95 disabled:bg-gray-100 disabled:text-gray-400 text-xxs font-bold rounded-xl transition-all duration-300 shadow-md cursor-pointer flex items-center justify-center gap-1 font-sans"
             >
-              <Send className="w-3 h-3" />
+              <Send className="w-3 h-3 text-white" />
               Buy Now
             </button>
           </div>

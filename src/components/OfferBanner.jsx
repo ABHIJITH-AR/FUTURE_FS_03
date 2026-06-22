@@ -10,25 +10,28 @@ import { motion } from 'motion/react';
 export const OfferBanner = () => {
   const offers = [
     {
-      icon: <Sprout className="w-8 h-8 text-[#CCFF00]" />,
+      icon: <Sprout className="w-8 h-8 text-[#4ADE80]" />,
       tag: "Vibrant Value Pack",
       title: "🌱 3 Plants for ₹100",
       description: "Pick any of our seasonal ₹30 flowers (like Roses, Ixora, etc.) and get a set of 3 for just ₹100!",
       gradient: "from-[#064E3B] to-[#043327]",
+      discount: "10% OFF",
     },
     {
-      icon: <BadgePercent className="w-8 h-8 text-[#CCFF00]" />,
+      icon: <BadgePercent className="w-8 h-8 text-[#4ADE80]" />,
       tag: "Bulk Plant Discount",
       title: "🌿 Buy More, Save More",
       description: "Buy grafted fruit trees worth ₹1500 or more and get free fertilizer starter kits with express delivery support.",
       gradient: "from-[#10B981] to-[#0a7a55]",
+      discount: "15% OFF",
     },
     {
-      icon: <Gift className="w-8 h-8 text-[#CCFF00]" />,
+      icon: <Gift className="w-8 h-8 text-[#4ADE80]" />,
       tag: "Seasonal Specimen",
       title: "🌺 Limited Monsoon Deals",
       description: "Get 20% off on premium Nutmeg saplings (Jaathikka) and exotic floral bonsai Adenium specimens.",
       gradient: "from-[#043327] to-[#064E3B]",
+      discount: "20% OFF",
     }
   ];
 
@@ -67,13 +70,18 @@ export const OfferBanner = () => {
                   <span className="p-3 bg-white/10 rounded-2xl flex items-center justify-center">
                     {offer.icon}
                   </span>
-                  <span className="text-[10px] font-bold text-emerald-100 tracking-wider uppercase bg-white/10 px-2.5 py-1 rounded-full">
-                    {offer.tag}
-                  </span>
+                  <div className="flex flex-col items-end gap-1.5">
+                    <span className="text-[10px] font-bold text-emerald-100 tracking-wider uppercase bg-white/10 px-2.5 py-1 rounded-full">
+                      {offer.tag}
+                    </span>
+                    <span className="text-xs font-black text-[#064E3B] bg-[#CCFF00] px-2.5 py-1 rounded-md shadow-sm self-end tracking-wider">
+                      {offer.discount}
+                    </span>
+                  </div>
                 </div>
 
                 {/* Offer Title & Text */}
-                <h3 className="text-2xl font-bold font-serif tracking-tight pt-2 group-hover:text-[#CCFF00] transition-colors">
+                <h3 className="text-2xl font-bold font-serif tracking-tight pt-2 group-hover:text-[#4ADE80] transition-colors">
                   {offer.title}
                 </h3>
                 <p className="text-gray-200/90 text-sm leading-relaxed">

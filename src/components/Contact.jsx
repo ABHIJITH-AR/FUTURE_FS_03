@@ -125,7 +125,7 @@ export const Contact = () => {
               {/* Card visual map header */}
               <div className="p-4.5 bg-gradient-to-r from-[#064E3B] to-[#10B981] text-white flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Compass className="w-4 h-4 text-[#CCFF00] animate-spin-slow" />
+                  <Compass className="w-4 h-4 text-[#4ADE80] animate-spin-slow" />
                   <span className="text-xs font-bold font-serif text-white">Rosemary Garden Location</span>
                 </div>
                 <span className="text-[10px] text-[#064E3B] bg-white/90 px-2 py-0.5 rounded-md font-semibold">Palachuvad, Kerala</span>

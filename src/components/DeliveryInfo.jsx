@@ -41,7 +41,7 @@ export const DeliveryInfo = () => {
     },
     {
       icon: <HeartCrack className="w-6 h-6 text-[#10B981]" />,
-      title: "100% Transit Guarantee",
+      title: "Transit Damage Guarantee",
       description: "If any plant gets damaged during shipment, we offer instant free replacements or partial waivers with zero questions asked.",
       badge: "Zero Risk"
     }
@@ -117,7 +117,7 @@ export const DeliveryInfo = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_right,_var(--tw-gradient-stops))] from-emerald-800/40 via-transparent to-transparent opacity-80" />
           
           <div className="space-y-2 relative">
-            <h4 className="text-lg md:text-xl font-bold font-serif text-[#CCFF00]">Packing Promise From Piravom</h4>
+            <h4 className="text-lg md:text-xl font-bold font-serif text-[#4ADE80]">Packing Promise From Piravom</h4>
             <p className="text-emerald-100/90 text-xs md:text-sm max-w-2xl leading-relaxed">
               No cracked stems, no dried soil. We hydrate the root balls and bind them securely in premium coconut husks prior to boxing. Your plants will arrive looking as fresh and hydrated as if plucked from our greenhouses 10 minutes ago!
             </p>

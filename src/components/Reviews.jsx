@@ -106,7 +106,7 @@ export const Reviews = () => {
                     <h4 className="text-sm font-bold text-[#064E3B] font-serif">
                       {REVIEWS[activeCarouselIndex].name}
                     </h4>
-                    <span className="text-[10px] text-gray-400 font-medium font-medium">Nursery Buyer</span>
+                    <span className="text-[10px] text-gray-400 font-medium">Nursery Buyer</span>
                   </div>
                 </div>
 

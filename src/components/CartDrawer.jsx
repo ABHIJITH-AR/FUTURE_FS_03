@@ -44,7 +44,7 @@ export const CartDrawer = ({
             {/* Drawer Header */}
             <div className="p-6 bg-gradient-to-r from-[#064E3B] to-[#10B981] text-white flex items-center justify-between border-b border-[#10B981]/20">
               <div className="flex items-center gap-2.5">
-                <ShoppingBag className="w-5.5 h-5.5 text-[#CCFF00]" />
+                <ShoppingBag className="w-5.5 h-5.5 text-[#4ADE80]" />
                 <div>
                   <h3 className="text-lg font-bold font-serif leading-none text-white">Your Garden Cart</h3>
                   <span className="text-[11px] text-emerald-100 font-medium">
@@ -175,9 +175,9 @@ export const CartDrawer = ({
                 <div className="space-y-2">
                   <button
                     onClick={onCheckout}
-                    className="w-full py-3.5 bg-[#CCFF00] text-emerald-950 rounded-xl text-xs font-black shadow-lg hover:brightness-115 active:brightness-95 transition-all text-center flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full py-3.5 bg-[#16A34A] text-white rounded-xl text-xs font-bold shadow-lg hover:bg-[#15803D] active:brightness-95 transition-all text-center flex items-center justify-center gap-2 cursor-pointer font-sans"
                   >
-                    <Send className="w-4 h-4 text-emerald-950" />
+                    <Send className="w-4 h-4 text-white" />
                     Checkout & Order All on WhatsApp
                   </button>
                   <button

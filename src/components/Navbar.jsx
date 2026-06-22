@@ -47,16 +47,16 @@ export const Navbar = ({ cartCount, onCartClick, activeSection }) => {
             className="flex items-center gap-2.5 group cursor-pointer"
             onClick={(e) => handleSmoothScroll(e, '#home')}
           >
-            <div className="relative w-11 h-11 overflow-hidden bg-white rounded-xl shadow-xs border border-white/20 flex items-center justify-center p-1 group-hover:scale-105 transition-transform duration-300 shrink-0">
+            <div className="relative w-11 h-11 bg-white rounded-full overflow-hidden border border-white/20 flex items-center justify-center p-1 group-hover:scale-105 transition-transform duration-300 shrink-0">
               <img 
-                src="https://lh3.googleusercontent.com/d/1wC2GNfzTKh33K3sgbi7-_NuYISkQBxMp" 
+                src="https://lh3.googleusercontent.com/d/1dwK0nRmf23PFXWBhmlPIBpdB_J5kissp" 
                 alt="Rosemary Garden Logo" 
                 className="w-full h-full object-contain select-none"
                 referrerPolicy="no-referrer"
               />
             </div>
             <div>
-              <span className="block text-lg font-bold font-serif tracking-wide leading-tight group-hover:text-[#CCFF00] transition-colors">
+              <span className="block text-lg font-bold font-serif tracking-wide leading-tight group-hover:text-[#4ADE80] transition-colors">
                 Rosemary Garden
               </span>
               <span className="block text-[10px] text-emerald-100/95 tracking-widest uppercase">
@@ -76,13 +76,13 @@ export const Navbar = ({ cartCount, onCartClick, activeSection }) => {
                   onClick={(e) => handleSmoothScroll(e, item.href)}
                   className={`px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 ${
                     isActive
-                      ? 'text-[#CCFF00] bg-black/20 relative'
-                      : 'text-gray-100 hover:text-[#CCFF00]'
+                      ? 'text-[#4ADE80] bg-black/20 relative'
+                      : 'text-gray-100 hover:text-[#4ADE80]'
                   }`}
                 >
-                  {item.label}
+                   {item.label}
                   {isActive && (
-                    <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#CCFF00] rounded-full" />
+                    <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#4ADE80] rounded-full" />
                   )}
                 </a>
               );
@@ -93,8 +93,8 @@ export const Navbar = ({ cartCount, onCartClick, activeSection }) => {
           <div className="flex items-center gap-2">
             
             <a
-              href="tel:+919061228537"
-              className="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-white/10 hover:bg-white/15 active:bg-white/5 rounded-xl text-xs font-semibold text-emerald-100 transition-colors hover:text-[#CCFF00]"
+               href="tel:+919061228537"
+              className="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-white/10 hover:bg-white/15 active:bg-white/5 rounded-xl text-xs font-semibold text-emerald-100 transition-colors hover:text-[#4ADE80]"
             >
               <PhoneCall className="w-3.5 h-3.5 text-emerald-300" />
               <span>+91 9061228537</span>
@@ -107,9 +107,9 @@ export const Navbar = ({ cartCount, onCartClick, activeSection }) => {
               aria-label="Open Cart"
               id="shopping-cart-button"
             >
-              <ShoppingCart className="w-5.5 h-5.5 text-emerald-100 group-hover:text-[#CCFF00] transition-colors" />
+              <ShoppingCart className="w-5.5 h-5.5 text-emerald-100 group-hover:text-[#4ADE80] transition-colors" />
               {cartCount > 0 ? (
-                <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-[#CCFF00] text-[#064E3B] text-[10px] font-bold ring-2 ring-[#064E3B] animate-pulse">
+                <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-[#16A34A] text-white text-[10px] font-bold ring-2 ring-[#064E3B] animate-pulse">
                   {cartCount}
                 </span>
               ) : null}
@@ -141,8 +141,8 @@ export const Navbar = ({ cartCount, onCartClick, activeSection }) => {
                   onClick={(e) => handleSmoothScroll(e, item.href)}
                   className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors ${
                     isActive
-                      ? 'bg-black/20 text-[#CCFF00] font-semibold'
-                      : 'text-gray-200 hover:bg-[#10B981]/25 hover:text-[#CCFF00]'
+                      ? 'bg-black/20 text-[#4ADE80] font-semibold'
+                      : 'text-gray-200 hover:bg-[#10B981]/25 hover:text-[#4ADE80]'
                   }`}
                 >
                   {item.label}
@@ -151,7 +151,7 @@ export const Navbar = ({ cartCount, onCartClick, activeSection }) => {
             })}
             <a
               href="tel:+919061228537"
-              className="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-emerald-300 bg-black/10 rounded-xl hover:text-[#CCFF00]"
+              className="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-emerald-300 bg-black/10 rounded-xl hover:text-[#4ADE80]"
             >
               <PhoneCall className="w-4 h-4" />
               <span>Call Rosemary Support: +91 9061228537</span>
