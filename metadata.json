@@ -1,6 +1,0 @@
-{
-  "name": "Rosemary Garden",
-  "description": "Modern and eco-friendly plant nursery website called Rosemary Garden with instant WhatsApp order integration, real-time cart, and responsive layout.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
